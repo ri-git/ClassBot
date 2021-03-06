@@ -1,5 +1,6 @@
 from datetime import date
 
+import self as self
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -70,8 +71,11 @@ if date.today().weekday() == 0:
                 if mclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
-                elif mclass == "ELL101":
-                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                if mclass == "ELL101":
+                    el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
+                    drive.execute_script("scrollBy(0,-1000);")
+                    time.sleep(3)
+                    el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
                 else:
                     print("That wasn't expected")
@@ -90,8 +94,11 @@ if date.today().weekday() == 1:
                 if tclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
-                elif tclass == "ELL101":
-                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                if tclass == "ELL101":
+                   el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
+                    drive.execute_script("scrollBy(0,-1000);")
+                    time.sleep(3)
+                    el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
                 else:
                     print("That wasn't expected")
@@ -110,8 +117,11 @@ if date.today().weekday() == 2:
                 if wclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
-                elif wclass == "ELL101":
-                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                if wclass == "ELL101":
+                    el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
+                    drive.execute_script("scrollBy(0,-1000);")
+                    time.sleep(3)
+                    el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
                 else:
                     print("That wasn't expected")
@@ -130,8 +140,11 @@ if date.today().weekday() == 3:
                 if thclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
-                elif thclass == "ELL101":
-                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                if thclass == "ELL101":
+                    el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
+                    drive.execute_script("scrollBy(0,-1000);")
+                    time.sleep(3)
+                    el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
                 else:
                     print("That wasn't expected")
@@ -153,7 +166,10 @@ if date.today().weekday() == 5:
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
                 elif fclass == "ELL101":
-                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                    el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
+                    drive.execute_script("scrollBy(0,-1000);")
+                    time.sleep(3)
+                    el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
                 else:
                     print("That wasn't expected")
@@ -164,7 +180,6 @@ if date.today().weekday() == 5:
 #drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
 #drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
 #
-
 
 
 
