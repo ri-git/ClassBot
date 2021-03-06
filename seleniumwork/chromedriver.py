@@ -46,7 +46,12 @@ if 'subtract' in text:
 cap = drive.find_element_by_name('valuepkg3')
 cap.send_keys(ans)
 cap.send_keys(Keys.RETURN)
-drive.find_element_by_link_text('3').click()
+#drive.find_element_by_link_text('3').click()
+
+# get element  after explicitly waiting for 10 seconds 
+element = WebDriverWait(drive, 10).until( 
+        EC.presence_of_element_located((By.LINK_TEXT, "3")) 
+    ) 
 
 day1 = []  # monday routine
 day2 = []  # tuesday routine
