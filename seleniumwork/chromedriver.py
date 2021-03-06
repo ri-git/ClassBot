@@ -56,6 +56,7 @@ if 'subtract' in text:
 cap = drive.find_element_by_name('valuepkg3')
 cap.send_keys(ans)
 cap.send_keys(Keys.RETURN)
+time.sleep(2)
 drive.find_element_by_link_text('3').click()
 
 
