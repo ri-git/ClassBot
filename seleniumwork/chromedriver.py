@@ -12,12 +12,21 @@ import re
 
 
 baseUrl = 'https://moodle.iitd.ac.in/login/index.php'
-locationChromeDriver ='C:/Windows/chromedriver'
+locationChromeDriver ='../drivers/chromedriver'
 
-entryno = input("Enter Your Entry Number/Email: ")
-pwd = input("Enter Your Moodle Password: ")
+entryno = input("enter your entry number: ")
+pwd = input("enter your moodle password: ")
 mclass= input("enter monday's class: ")
-stime= input("enter start time: ")
+mstime= input("enter start time: ")
+tclass= input("enter tuesday's class: ")
+tstime= input("enter start time: ")
+wclass= input("enter wednesday's class: ")
+wstime= input("enter start time: ")
+thclass= input("enter thursday's class: ")
+thstime= input("enter start time: ")
+fclass= input("enter friday's class: ")
+fstime= input("enter start time: ")
+
 
 drive = webdriver.Chrome(executable_path=locationChromeDriver)
 drive.get(baseUrl)
@@ -46,40 +55,117 @@ if 'subtract' in text:
 cap = drive.find_element_by_name('valuepkg3')
 cap.send_keys(ans)
 cap.send_keys(Keys.RETURN)
-# get element  after explicitly waiting for 10 seconds 
-element = WebDriverWait(drive, 10).until( 
-        EC.presence_of_element_located((By.LINK_TEXT, "3")) 
-    ) 
-
-# click the element  
-element.click()
-drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
-drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+drive.find_element_by_link_text('3').click()
 
 
-day1 = []  # monday routine
-day2 = []  # tuesday routine
-day3 = []  # wednesday routine
-day4 = []  # thursday routine
-day5 = []  # friday routine
-
-startclass = ["9:30",  ]  # starting time of classes in 24-hours format
-endclass = ["11:00",  ]  # ending time of classes in 24-hours format
 noc = 1
-if date.today().weekday() == 5:
+if date.today().weekday() == 0:
     print("MY BOT is checking MONDAY Timetable")
     i = 0
     while i <= 1:
         print("Looking for class...")
         i=2
         for x in range(0, noc):
-            if time.strftime('%H:%M') == stime:
+            if time.strftime('%H:%M') == mstime:
                 if mclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                if mclass == "ELL101":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                else:
+                    print("That wasn't expected")
                 print("MY BOT : Its time for the class")
                 #classjoin(day1, x, endclass)
                 continue
+
+if date.today().weekday() == 1:
+    print("MY BOT is checking TUESDAY Timetable")
+    i = 0
+    while i <= 1:
+        print("Looking for class...")
+        i=2
+        for x in range(0, noc):
+            if time.strftime('%H:%M') == tstime:
+                if tclass == "COL100":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                if tclass == "ELL101":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                else:
+                    print("That wasn't expected")
+                print("MY BOT : Its time for the class")
+                #classjoin(day1, x, endclass)
+                continue
+
+if date.today().weekday() == 2:
+    print("MY BOT is checking WEDNESDAY Timetable")
+    i = 0
+    while i <= 1:
+        print("Looking for class...")
+        i=2
+        for x in range(0, noc):
+            if time.strftime('%H:%M') == wstime:
+                if wclass == "COL100":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                if wclass == "ELL101":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                else:
+                    print("That wasn't expected")
+                print("MY BOT : Its time for the class")
+                #classjoin(day1, x, endclass)
+                continue
+
+if date.today().weekday() == 3:
+    print("MY BOT is checking THURSDAY Timetable")
+    i = 0
+    while i <= 1:
+        print("Looking for class...")
+        i=2
+        for x in range(0, noc):
+            if time.strftime('%H:%M') == thstime:
+                if thclass == "COL100":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                if thclass == "ELL101":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                else:
+                    print("That wasn't expected")
+                print("MY BOT : Its time for the class")
+                #classjoin(day1, x, endclass)
+                continue
+
+if date.today().weekday() == 5:
+    print("MY BOT is checking FRIDAY Timetable")
+    i = 0
+    time.sleep(2)
+    while i <= 1:
+        print("Looking for class...")
+        i=2
+        for x in range(0, noc):
+            print(time.strftime('%H:%M'))
+            if time.strftime('%H:%M') == fstime:
+                if fclass == "COL100":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                if fclass == "ELL101":
+                    drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+                    drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                else:
+                    print("That wasn't expected")
+                print("MY BOT : Its time for the class")
+                #classjoin(day1, x, endclass)
+                continue
+
+#drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+#drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+#
+
+
 
 
 
