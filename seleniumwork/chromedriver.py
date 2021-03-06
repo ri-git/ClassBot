@@ -13,14 +13,16 @@ baseUrl = 'https://moodle.iitd.ac.in/login/index.php'
 locationChromeDriver ='../drivers/chromedriver'
 
 entryno = input("enter your entry number: ")
-
+pwd = input("enter your moodle password: ")
 
 drive = webdriver.Chrome(executable_path=locationChromeDriver)
 drive.get(baseUrl)
 
 search = drive.find_element_by_name('username')
 search.send_keys(entryno)
-
+spwd= drive.find_element_by_id('password')
+spwd.send_keys(pwd)
+#spwd.send_keys(Keys.RETURN)
 
 text = drive.find_element_by_id('login').text
 temp = re.findall(r'\d+', text)
@@ -39,6 +41,26 @@ if 'subtract' in text:
 
 cap = drive.find_element_by_name('valuepkg3')
 cap.send_keys(ans)
+cap.send_keys(Keys.RETURN)
+drive.find_element_by_link_text('3').click()
+drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
