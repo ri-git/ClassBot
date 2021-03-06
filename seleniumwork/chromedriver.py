@@ -78,6 +78,10 @@ if date.today().weekday() == 0:
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -101,6 +105,10 @@ if date.today().weekday() == 1:
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -124,6 +132,10 @@ if date.today().weekday() == 2:
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -147,6 +159,10 @@ if date.today().weekday() == 3:
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -172,6 +188,10 @@ if date.today().weekday() == 5:
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
