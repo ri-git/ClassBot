@@ -12,10 +12,10 @@ import re
 
 
 baseUrl = 'https://moodle.iitd.ac.in/login/index.php'
-locationChromeDriver ='../drivers/chromedriver'
+locationChromeDriver ='C:/Windows/chromedriver'
 
-entryno = input("enter your entry number: ")
-pwd = input("enter your moodle password: ")
+entryno = input("Enter Your Entry Number/Email: ")
+pwd = input("Enter Your Moodle Password: ")
 mclass= input("enter monday's class: ")
 stime= input("enter start time: ")
 
@@ -46,12 +46,16 @@ if 'subtract' in text:
 cap = drive.find_element_by_name('valuepkg3')
 cap.send_keys(ans)
 cap.send_keys(Keys.RETURN)
-#drive.find_element_by_link_text('3').click()
-
 # get element  after explicitly waiting for 10 seconds 
 element = WebDriverWait(drive, 10).until( 
         EC.presence_of_element_located((By.LINK_TEXT, "3")) 
     ) 
+
+# click the element  
+element.click()
+drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+
 
 day1 = []  # monday routine
 day2 = []  # tuesday routine
@@ -76,8 +80,7 @@ if date.today().weekday() == 5:
                 print("MY BOT : Its time for the class")
                 #classjoin(day1, x, endclass)
                 continue
-#drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
-#drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+
 
 
 
