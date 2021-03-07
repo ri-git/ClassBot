@@ -114,9 +114,10 @@ async def on_message(message):
             cap.send_keys(Keys.RETURN)
 
             # get element  after explicitly waiting for 10 seconds 
-            page3 = WebDriverWait(drive, 10).until( 
-                EC.presence_of_element_located((By.LINK_TEXT, "3")) 
-            )
+            #page3 = WebDriverWait(drive, 10).until( 
+                #EC.presence_of_element_located((By.LINK_TEXT, "3")) 
+            #)
+            page3= drive.find_element_by_link_text('3')
             page3.click()        
             drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
             drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
