@@ -255,9 +255,9 @@ async def on_message(message):
         if mon[i] == "COL100":
             schedule.every().monday.at(monstart[i]).do(opCOL100)
         elif mon[i] == "ELL101":
-            schedule.every().monday.at(monstart[i]).do(opCOL100)
+            schedule.every().monday.at(monstart[i]).do(opELL101)
         elif mon[i] == "MTL101":
-            schedule.every().monday.at(monstart[i]).do(opCOL100)
+            schedule.every().monday.at(monstart[i]).do(opMTL101B)
         else:
             print("Invalid Class Name")
 
