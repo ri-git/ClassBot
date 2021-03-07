@@ -57,8 +57,8 @@ async def on_message(message):
         #await message.channel.send('Enter your kerberos password!')
         #pwd= message.content    
 
-        entryno = input("enter your entry number: ")
-        pwd = input("enter your moodle password: ")
+        entryno = input("Enter Your Entry Number/Email: ")
+        pwd = input("Enter Your Moodle Password: ")
         
 
     def opMoodle():
