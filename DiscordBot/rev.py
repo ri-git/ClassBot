@@ -23,7 +23,7 @@ TOKEN = os.getenv('TOKEN')
 GUILD = os.getenv('GUILD')
 baseUrl = 'https://moodle.iitd.ac.in/login/index.php'
 locationChromeDriver ='C:\Program Files (x86)\chromedriver.exe'
-
+drive = webdriver.Chrome(executable_path=locationChromeDriver)
 client = discord.Client()
 
 @client.event
@@ -52,7 +52,6 @@ async def on_message(message):
         pwd = input("enter your moodle password: ")
         
         def opMoodle()
-            drive = webdriver.Chrome(executable_path=locationChromeDriver)
             drive.get(baseUrl)
 
             search = drive.find_element_by_name('username')
