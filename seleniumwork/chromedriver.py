@@ -13,7 +13,7 @@ import re
 
 
 baseUrl = 'https://moodle.iitd.ac.in/login/index.php'
-locationChromeDriver ="C:\Program Files (x86)\chromedriver.exe"
+locationChromeDriver ='../drivers/chromedriver'
 
 entryno = input("enter your entry number: ")
 pwd = input("enter your moodle password: ")
