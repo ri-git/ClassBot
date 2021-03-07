@@ -46,7 +46,7 @@ async def on_message(message):
         await message.channel.send('Hey, have a nice day!')
 
     if message.content.startswith('$class'):
-        await message.channel.send('Enter you information in the terminal!') 
+        await message.channel.send('Enter your information in the terminal!') 
 
         entryno = input("enter your entry number: ")
         pwd = input("enter your moodle password: ")
