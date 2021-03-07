@@ -58,7 +58,7 @@ async def on_message(message):
         entryno = input("enter your entry number: ")
         pwd = input("enter your moodle password: ")
         
-        def opMoodle()
+        def opMoodle():
             drive.get(baseUrl)
 
             search = drive.find_element_by_name('username')
