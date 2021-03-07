@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import time
 import re
-
+import schedule
 
 
 import os
@@ -105,7 +105,7 @@ async def on_message(message):
             temp = re.findall(r'\d+', text)
             res= list(map(int, temp))
             if 'first' in text:
-            ans = res[0]
+                ans = res[0]
 
             if 'second' in text:
                 ans = res[1]
@@ -159,12 +159,12 @@ async def on_message(message):
 
     schedule.every().monday.at("09:28").do(opCOL100)
     schedule.every().tuesday.at("09:58").do(opELL101)
-    schedule.every().tuesday.at("03:58").do(opMTL101B)
+    schedule.every().tuesday.at("15:58").do(opMTL101B)
     schedule.every().wednesday.at("09:58").do(opELL101)
-    schedule.every().wednesday.at("03:58").do(opMTL101B)
+    schedule.every().wednesday.at("15:58").do(opMTL101B)
     schedule.every().thursday.at("09:28").do(opCOL100)
     schedule.every().friday.at("09:58").do(opELL101)
-    schedule.every().friday.at("03:58").do(opMTL101B)
+    schedule.every().friday.at("15:58").do(opMTL101B)
 
     while True: 
   
