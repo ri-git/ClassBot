@@ -1,0 +1,6 @@
+selenium==3.141.0
+urllib3==1.26.3
+schedule==1.0.0
+datetime==49.2.1
+discord==1.0.1
+python-dotenv==0.15.0
