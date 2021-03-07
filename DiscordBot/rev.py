@@ -59,7 +59,7 @@ async def on_message(message):
 
         entryno = input("Enter Your Entry Number/Email: ")
         pwd = input("Enter Your Moodle Password: ")
-        
+        tempdur = 7200
 
         def opMoodle():
             drive = webdriver.Chrome(executable_path=locationChromeDriver)
@@ -133,7 +133,7 @@ async def on_message(message):
                 drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                 drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
                 drive.find_element_by_xpath('/html/body/d1iv[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
-                time.sleep(10)  #duration of a class?(seconds) 
+                time.sleep(tempdur)  #duration of a class?(seconds) 
                 drive.switch_to.window(drive.window_handles[1])
                 drive.close()
                 drive.switch_to.window(drive.window_handles[0])
@@ -183,7 +183,7 @@ async def on_message(message):
                 el.click()
                 drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
                 drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
-                time.sleep(10)    #duration of a class?(seconds)
+                time.sleep(tempdur)    #duration of a class?(seconds)
                 drive.switch_to.window(drive.window_handles[1])
                 drive.close()
                 drive.switch_to.window(drive.window_handles[0])
@@ -234,7 +234,7 @@ async def on_message(message):
                 mt.click()
                 drive.find_element_by_xpath('//*[@id="module-59372"]/div/div/div[2]/div/a/span').click()
                 drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
-                time.sleep(7200)    #duration of a class?(seconds)
+                time.sleep(tempdur)    #duration of a class?(seconds)
                 #driver.close()
                 drive.switch_to.window(drive.window_handles[1])
                 drive.close()
@@ -251,7 +251,10 @@ async def on_message(message):
             print("For class ",i+1)
             mon.append(input("Enter class name: "))
             monstart.append(input("Enter class start time: "))  #hour:min 
-            mondur.append(input("Enter class duration in Seconds: "))
+            monlast = input("Enter class duration in Seconds: ")
+            monlast = int(monlast) 
+            mondur.append(monlast)
+            tempdur = mondur[i]
             if mon[i] == "COL100":
                 schedule.every().monday.at(monstart[i]).do(opCOL100)
             elif mon[i] == "ELL101":
@@ -270,7 +273,10 @@ async def on_message(message):
             print("For class ",i+1)
             tue.append(input("Enter class name: "))
             tuestart.append(input("Enter class start time: "))  #hour:min 
-            tuedur.append(input("Enter class duration in Seconds: "))
+            tuelast = input("Enter class duration in Seconds: ")
+            tuelast = int(tuelast) 
+            tuedur.append(tuelast)
+            tempdur = tuedur[i]
             if tue[i] == "COL100":
                 schedule.every().tuesday.at(tuestart[i]).do(opCOL100)
             elif tue[i] == "ELL101":
@@ -289,7 +295,10 @@ async def on_message(message):
             print("For class ",i+1)
             wed.append(input("Enter class name: "))
             wedstart.append(input("Enter class start time: "))  #hour:min 
-            weddur.append(input("Enter class duration in Seconds: "))
+            wedlast = input("Enter class duration in Seconds: ")
+            wedlast = int(wedlast) 
+            weddur.append(wedlast)
+            tempdur = weddur[i]
             if wed[i] == "COL100":
                 schedule.every().wednesday.at(wedstart[i]).do(opCOL100)
             elif wed[i] == "ELL101":
@@ -308,7 +317,10 @@ async def on_message(message):
             print("For class ",i+1)
             thu.append(input("Enter class name: "))
             thustart.append(input("Enter class start time: "))  #hour:min 
-            thudur.append(input("Enter class duration in Seconds: "))
+            thulast = input("Enter class duration in Seconds: ")
+            thulast = int(thulast) 
+            thudur.append(thulast)
+            tempdur = thudur[i]
             if thu[i] == "COL100":
                 schedule.every().thursday.at(thustart[i]).do(opCOL100)
             elif thu[i] == "ELL101":
@@ -327,7 +339,10 @@ async def on_message(message):
             print("For class ",i+1)
             fri.append(input("Enter class name: "))
             fristart.append(input("Enter class start time (Hr(24):Min): "))  #hour:min 
-            fridur.append(input("Enter class duration in Seconds: "))
+            frilast = input("Enter class duration in Seconds: ")
+            frilast = int(frilast) 
+            fridur.append(frilast)
+            tempdur = fridur[i]
             if fri[i] == "COL100":
                 schedule.every().friday.at(fristart[i]).do(opCOL100)
             elif fri[i] == "ELL101":
