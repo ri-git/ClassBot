@@ -100,7 +100,7 @@ if date.today().weekday() == 1:
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
                 if tclass == "ELL101":
-                   el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
+                    el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
                     time.sleep(3)
                     el.click()
