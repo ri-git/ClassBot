@@ -229,5 +229,8 @@ async def on_message(message):
                         #classjoin(day1, x, endclass)
                         continue
 
+        drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
+        drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+
 
 client.run(TOKEN)
