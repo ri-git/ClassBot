@@ -183,7 +183,6 @@ async def on_message(message):
 
 
     def opMTL101B():        
-        drive = webdriver.Chrome(executable_path=locationChromeDriver)
         # drive.get(baseUrl)
         #opMoodle()
             drive = webdriver.Chrome(executable_path=locationChromeDriver)
