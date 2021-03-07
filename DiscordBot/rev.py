@@ -167,15 +167,15 @@ async def on_message(message):
             #)
             page3= drive.find_element_by_link_text('3')
             page3.click()
-        drive.execute_script("scrollBy(0,-1000);")
-        el = WebDriverWait(drive, 10).until( 
+            drive.execute_script("scrollBy(0,-1000);")
+            el = WebDriverWait(drive, 10).until( 
                 EC.presence_of_element_located((By.XPATH, '//*[@id="course-info-container-11053"]/div/div[2]/h4/a')) 
             )
-        el.click()
-        drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
-        drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
-        time.sleep(7200)    #duration of a class?(seconds)
-        drive.close()
+            el.click()
+            drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+            drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+            time.sleep(7200)    #duration of a class?(seconds)
+            drive.close()
 
     def opMTL101B():
         #opMoodle()
@@ -212,15 +212,15 @@ async def on_message(message):
             #)
             page3= drive.find_element_by_link_text('3')
             page3.click()
-        drive.execute_script("scrollBy(0,-1500);")
-        mt = WebDriverWait(drive, 10).until( 
-            EC.presence_of_element_located((By.XPATH, '//*[@id="course-info-container-11626"]/div/div[2]/h4/a')) 
-        )
-        mt.click()
-        drive.find_element_by_xpath('//*[@id="module-59372"]/div/div/div[2]/div/a/span').click()
-        drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
-        time.sleep(7200)    #duration of a class?(seconds)
-        drive.close()
+            drive.execute_script("scrollBy(0,-1500);")
+            mt = WebDriverWait(drive, 10).until( 
+                EC.presence_of_element_located((By.XPATH, '//*[@id="course-info-container-11626"]/div/div[2]/h4/a')) 
+            )
+            mt.click()
+            drive.find_element_by_xpath('//*[@id="module-59372"]/div/div/div[2]/div/a/span').click()
+            drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+            time.sleep(7200)    #duration of a class?(seconds)
+            drive.close()
 
 
     schedule.every().monday.at("09:28").do(opCOL100)
