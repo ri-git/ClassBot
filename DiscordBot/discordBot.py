@@ -42,7 +42,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
+    if message.content.startswith('$hi'):
+        await message.channel.send('Hey, have a nice day!')
+
+    if message.content.startswith('$class'):
         await message.channel.send('Enter you information in the terminal!') 
 
         entryno = input("enter your entry number: ")
@@ -197,7 +200,7 @@ async def on_message(message):
                         #classjoin(day1, x, endclass)
                         continue
 
-        if date.today().weekday() == 5:
+        if date.today().weekday() == 4:
             print("MY BOT is checking FRIDAY Timetable")
             i = 0
             time.sleep(2)
