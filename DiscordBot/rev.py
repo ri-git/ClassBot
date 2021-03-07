@@ -51,47 +51,79 @@ async def on_message(message):
         entryno = input("enter your entry number: ")
         pwd = input("enter your moodle password: ")
         
-    def opMoodle()
-        drive = webdriver.Chrome(executable_path=locationChromeDriver)
-        drive.get(baseUrl)
+        def opMoodle()
+            drive = webdriver.Chrome(executable_path=locationChromeDriver)
+            drive.get(baseUrl)
 
-        search = drive.find_element_by_name('username')
-        search.send_keys(entryno)
-        spwd= drive.find_element_by_id('password')
-        spwd.send_keys(pwd)
+            search = drive.find_element_by_name('username')
+            search.send_keys(entryno)
+            spwd= drive.find_element_by_id('password')
+            spwd.send_keys(pwd)
 
-        text = drive.find_element_by_id('login').text
-        temp = re.findall(r'\d+', text)
-        res= list(map(int, temp))
-        if 'first' in text:
-        ans = res[0]
+            text = drive.find_element_by_id('login').text
+            temp = re.findall(r'\d+', text)
+            res= list(map(int, temp))
+            if 'first' in text:
+            ans = res[0]
 
-        if 'second' in text:
-            ans = res[1]
+            if 'second' in text:
+                ans = res[1]
 
-        if 'add' in text:
-            ans = res[0] + res[1]
+            if 'add' in text:
+                ans = res[0] + res[1]
 
-        if 'subtract' in text:
-            ans = res[0] - res[1]
+            if 'subtract' in text:
+                ans = res[0] - res[1]
 
-        cap = drive.find_element_by_name('valuepkg3')
-        cap.send_keys(ans)
-        cap.send_keys(Keys.RETURN)
+            cap = drive.find_element_by_name('valuepkg3')
+            cap.send_keys(ans)
+            cap.send_keys(Keys.RETURN)
 
-        # get element  after explicitly waiting for 10 seconds 
-        page3 = WebDriverWait(drive, 10).until( 
+            # get element  after explicitly waiting for 10 seconds 
+            page3 = WebDriverWait(drive, 10).until( 
                 EC.presence_of_element_located((By.LINK_TEXT, "3")) 
-         )
-        page3.click()
+            )
+            page3.click()
 
     def opCOL100():
-        opMoodle()
-        drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
-        drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
-        drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
-        time.sleep(7200)  #duration of a class?(seconds) 
-        driver.close()
+        #opMoodle()
+            drive = webdriver.Chrome(executable_path=locationChromeDriver)
+            drive.get(baseUrl)
+
+            search = drive.find_element_by_name('username')
+            search.send_keys(entryno)
+            spwd= drive.find_element_by_id('password')
+            spwd.send_keys(pwd)
+
+            text = drive.find_element_by_id('login').text
+            temp = re.findall(r'\d+', text)
+            res= list(map(int, temp))
+            if 'first' in text:
+            ans = res[0]
+
+            if 'second' in text:
+                ans = res[1]
+
+            if 'add' in text:
+                ans = res[0] + res[1]
+
+            if 'subtract' in text:
+                ans = res[0] - res[1]
+
+            cap = drive.find_element_by_name('valuepkg3')
+            cap.send_keys(ans)
+            cap.send_keys(Keys.RETURN)
+
+            # get element  after explicitly waiting for 10 seconds 
+            page3 = WebDriverWait(drive, 10).until( 
+                EC.presence_of_element_located((By.LINK_TEXT, "3")) 
+            )
+            page3.click()        
+            drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
+            drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+            drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+            time.sleep(7200)  #duration of a class?(seconds) 
+            driver.close()
 
     def opELL101():
         opMoodle()
