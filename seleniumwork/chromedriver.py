@@ -77,6 +77,8 @@ if date.today().weekday() == 0:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 if mclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
@@ -88,6 +90,8 @@ if date.today().weekday() == 0:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -110,6 +114,8 @@ if date.today().weekday() == 1:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 if tclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
@@ -121,6 +127,8 @@ if date.today().weekday() == 1:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -143,6 +151,8 @@ if date.today().weekday() == 2:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 if wclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
@@ -154,6 +164,8 @@ if date.today().weekday() == 2:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -176,6 +188,8 @@ if date.today().weekday() == 3:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 if thclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
@@ -187,6 +201,8 @@ if date.today().weekday() == 3:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
@@ -211,6 +227,8 @@ if date.today().weekday() == 4:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 elif fclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
@@ -222,14 +240,20 @@ if date.today().weekday() == 4:
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
                     drive.switch_to.window(drive.window_handles[0])
+                    drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+                    drive.find_element_by_link_text('3').click()
                 else:
                     print("That wasn't expected")
                 print("MY BOT : Its time for the class")
                 #classjoin(day1, x, endclass)
                 continue
 
-drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a').click()
-drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+  while True: 
+  
+        # Checks whether a scheduled task is pending to run or not 
+        schedule.run_pending() 
+        time.sleep(1)               
+                
 
 
 
