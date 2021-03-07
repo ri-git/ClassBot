@@ -47,6 +47,14 @@ async def on_message(message):
 
     if message.content.startswith('$class'):
         await message.channel.send('Enter your information in the terminal!') 
+        
+    #if message.content.startswith('$id'):
+        #await message.channel.send('Enter your kerberos id!')
+        #entryno=message.content
+
+    #if message.content.startswith('$pwd'):
+        #await message.channel.send('Enter your kerberos password!')
+        #pwd= message.content    
 
         entryno = input("enter your entry number: ")
         pwd = input("enter your moodle password: ")
