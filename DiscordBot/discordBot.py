@@ -1,6 +1,6 @@
 from datetime import date
 
-import self as self
+#import self as self
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -43,7 +43,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('$hello'):
-        await message.channel.send('Hello!') 
+        await message.channel.send('Enter you information in the terminal!') 
 
         entryno = input("enter your entry number: ")
         pwd = input("enter your moodle password: ")
