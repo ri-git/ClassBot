@@ -1,6 +1,6 @@
 # Impartus Bot
 
-Waking up early in the morning to attend some online classes can be hard sometimes. So we made a bot that attends online classes according to our timetable, which allows us to focus more on the classes that we prefer and get more work done.
+Waking up early in the morning to attend some online classes can be hard sometimes. So we made a bot that attends online classes according to your timetable, which allows you to focus more on the classes that you prefer and get more work done.
 
 
 ## Install Steps
