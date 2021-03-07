@@ -134,7 +134,12 @@ async def on_message(message):
             drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
             drive.find_element_by_xpath('/html/body/d1iv[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
             time.sleep(10)  #duration of a class?(seconds) 
+            drive.switch_to.window(drive.window_handles[1])
             drive.close()
+            drive.switch_to.window(drive.window_handles[0])
+            drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+            drive.find_element_by_link_text('3').click()
+            #drive.close()
 
     def opELL101():
         #opMoodle()
@@ -179,7 +184,11 @@ async def on_message(message):
             drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
             drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
             time.sleep(10)    #duration of a class?(seconds)
+            drive.switch_to.window(drive.window_handles[1])
             drive.close()
+            drive.switch_to.window(drive.window_handles[0])
+            drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+            drive.find_element_by_link_text('3').click()
 
 
     def opMTL101B():        
@@ -227,7 +236,11 @@ async def on_message(message):
             drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
             time.sleep(7200)    #duration of a class?(seconds)
             #driver.close()
+            drive.switch_to.window(drive.window_handles[1])
             drive.close()
+            drive.switch_to.window(drive.window_handles[0])
+            drive.find_element_by_xpath('//*[ @ id = "label_3_22"] / span').click()
+            drive.find_element_by_link_text('3').click()
 
 
     # # schedule.every().sunday.at("18:42").do(opCOL100)
