@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from getpass import getpass
 
 import time
 import re
@@ -58,7 +59,7 @@ async def on_message(message):
         #pwd= message.content    
 
         entryno = input("Enter Your Entry Number/Email: ")
-        pwd = input("Enter Your Moodle Password: ")
+        pwd = getpass("Enter Your Moodle Password: ")
         tempdur = 7200
 
         def opMoodle():
