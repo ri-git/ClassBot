@@ -130,7 +130,7 @@ async def on_message(message):
             drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
             drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
             time.sleep(7200)  #duration of a class?(seconds) 
-            driver.close()
+            drive.close()
 
     def opELL101():
         #opMoodle()
@@ -175,7 +175,7 @@ async def on_message(message):
         drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
         drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
         time.sleep(7200)    #duration of a class?(seconds)
-        driver.close()
+        drive.close()
 
     def opMTL101B():
         #opMoodle()
@@ -220,7 +220,7 @@ async def on_message(message):
         drive.find_element_by_xpath('//*[@id="module-59372"]/div/div/div[2]/div/a/span').click()
         drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
         time.sleep(7200)    #duration of a class?(seconds)
-        driver.close()
+        drive.close()
 
 
     schedule.every().monday.at("09:28").do(opCOL100)
