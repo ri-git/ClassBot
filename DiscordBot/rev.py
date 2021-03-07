@@ -70,7 +70,7 @@ async def on_message(message):
             temp = re.findall(r'\d+', text)
             res= list(map(int, temp))
             if 'first' in text:
-            ans = res[0]
+                ans = res[0]
 
             if 'second' in text:
                 ans = res[1]
