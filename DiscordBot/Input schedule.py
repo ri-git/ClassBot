@@ -24,9 +24,9 @@ for i in range(ncmon):
     if mon[i] == "COL100":
         schedule.every().monday.at(monstart[i]).do(opCOL100)
     elif mon[i] == "ELL101":
-        schedule.every().monday.at(monstart[i]).do(opCOL100)
+        schedule.every().monday.at(monstart[i]).do(opELL101)
     elif mon[i] == "MTL101":
-        schedule.every().monday.at(monstart[i]).do(opCOL100)
+        schedule.every().monday.at(monstart[i]).do(opMTL101B)
     else:
         print("Invalid Class Name")
 
@@ -43,9 +43,9 @@ for i in range(nctue):
     if tue[i] == "COL100":
         schedule.every().tuesday.at(tuestart[i]).do(opCOL100)
     elif tue[i] == "ELL101":
-        schedule.every().tuesday.at(tuestart[i]).do(opCOL100)
+        schedule.every().tuesday.at(tuestart[i]).do(opELL101)
     elif tue[i] == "MTL101":
-        schedule.every().tuesday.at(tuestart[i]).do(opCOL100)
+        schedule.every().tuesday.at(tuestart[i]).do(opMTL101B)
     else:
         print("Invalid Class Name")
 
@@ -62,9 +62,9 @@ for i in range(ncwed):
     if wed[i] == "COL100":
         schedule.every().wednesday.at(wedstart[i]).do(opCOL100)
     elif wed[i] == "ELL101":
-        schedule.every().wednesday.at(wedstart[i]).do(opCOL100)
+        schedule.every().wednesday.at(wedstart[i]).do(opELL101)
     elif wed[i] == "MTL101":
-        schedule.every().wednesday.at(wedstart[i]).do(opCOL100)
+        schedule.every().wednesday.at(wedstart[i]).do(opMTL101B)
     else:
         print("Invalid Class Name")
 
@@ -81,9 +81,9 @@ for i in range(ncthu):
     if thu[i] == "COL100":
         schedule.every().thursday.at(thustart[i]).do(opCOL100)
     elif thu[i] == "ELL101":
-        schedule.every().thursday.at(thustart[i]).do(opCOL100)
+        schedule.every().thursday.at(thustart[i]).do(opELL101)
     elif thu[i] == "MTL101":
-        schedule.every().thursday.at(thustart[i]).do(opCOL100)
+        schedule.every().thursday.at(thustart[i]).do(opMTL101B)
     else:
         print("Invalid Class Name")
 
@@ -100,9 +100,9 @@ for i in range(ncfri):
     if fri[i] == "COL100":
         schedule.every().friday.at(fristart[i]).do(opCOL100)
     elif fri[i] == "ELL101":
-        schedule.every().friday.at(fristart[i]).do(opCOL100)
+        schedule.every().friday.at(fristart[i]).do(opELL101)
     elif fri[i] == "MTL101":
-        schedule.every().friday.at(fristart[i]).do(opCOL100)
+        schedule.every().friday.at(fristart[i]).do(opMTL101B)
     else:
         print("Invalid Class Name")
 
