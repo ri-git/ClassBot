@@ -72,12 +72,18 @@ if date.today().weekday() == 0:
                 if mclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 if mclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
                     time.sleep(7200)#duration of a class?
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
@@ -99,12 +105,18 @@ if date.today().weekday() == 1:
                 if tclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 if tclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
                     time.sleep(7200)#duration of a class?
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
@@ -126,12 +138,18 @@ if date.today().weekday() == 2:
                 if wclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 if wclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
                     time.sleep(7200)#duration of a class?
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
@@ -153,12 +171,18 @@ if date.today().weekday() == 3:
                 if thclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 if thclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
                     time.sleep(7200)#duration of a class?
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
@@ -182,12 +206,18 @@ if date.today().weekday() == 4:
                 if fclass == "COL100":
                     drive.find_element_by_xpath('//*[@id="course-info-container-10887"]/div/div[2]/h4/a').click()
                     drive.find_element_by_xpath('//*[@id="module-56927"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
+                    time.sleep(7200)#duration of a class?
+                    drive.switch_to.window(drive.window_handles[1])
+                    drive.close()
+                    drive.switch_to.window(drive.window_handles[0])
                 elif fclass == "ELL101":
                     el=drive.find_element_by_xpath('//*[@id="course-info-container-11053"]/div/div[2]/h4/a')
                     drive.execute_script("scrollBy(0,-1000);")
                     time.sleep(3)
                     el.click()
                     drive.find_element_by_xpath('//*[@id="module-56737"]/div/div/div[2]/div/a/span').click()
+                    drive.find_element_by_xpath('/html/body/div[1]/ui-view/div[1]/div[2]/ui-view/div/div[2]/div[2]/div/md-content/live-streaming-lectures/md-card/md-list/div[1]/div/div[2]/button/span').click()
                     time.sleep(7200)#duration of a class?
                     drive.switch_to.window(drive.window_handles[1])
                     drive.close()
