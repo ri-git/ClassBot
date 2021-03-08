@@ -19,7 +19,7 @@ Waking up early in the morning to attend some online classes can be hard sometim
 
 ![Chromedriver](https://i.imgur.com/3Ti5b6q.png)
 
-- Copy Chromedriver to C:\Windows for Windows users or /usr/bin if you're using Linux or Mac
+- Copy Chromedriver to C:\Program Files (x86) for Windows users or /usr/bin if you're using Linux or Mac
 - Clone this project from [THIS LINK](https://github.com/ri-git/Hackathon_demo.git)
 - Open project folder in cmd and run the following command
 ```
